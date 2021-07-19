@@ -1,24 +1,21 @@
 {
-  "name": "team-profile-generator",
+  "name": "unit10hw",
   "version": "1.0.0",
-  "description": "![badmath](https://img.shields.io/github/repo-size/TheHebi/team-profile-generator) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ## Table of Contents * [Installation](#installation) * [Instructions](#instructions)",
+  "description": "OOP and testing for week 10 homework",
   "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose test/*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheHebi/team-profile-generator.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TheHebi/team-profile-generator/issues"
-  },
-  "homepage": "https://github.com/TheHebi/team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2",
-    "jest": "^27.0.6"
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
