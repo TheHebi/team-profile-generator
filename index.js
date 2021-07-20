@@ -4,7 +4,6 @@ const fs = require("fs")
 
 // link to page creation
 const generateHTML = require('./util/generateHtml');
-const generateCss = require("./util/generateCss")
 
 // team profiles
 const Manager = require('./lib/Manager');
@@ -19,7 +18,13 @@ function newMember(){
         {
         type: "input",
         message: "Enter team member's Name",
-        name: "name"
+        name: "name",
+        validate: function(data){
+            if(data.length <= 0){
+                return "Please input a name"
+            }
+            return true
+        }
         },
         {
         type: "list",
@@ -30,7 +35,13 @@ function newMember(){
         {
             type: "input",
             message: "Team member's email?",
-            name: "email"
+            name: "email",
+            validate: function(data){
+                if(data.includes(`@`) === false){
+                    return "A valid email is required"
+                }
+                return true
+            }
             },
         {
         type: "input",
@@ -95,12 +106,11 @@ function newMember(){
 }
 
 function makeHtml(str){
-    fs.writeFile('index.html', str, err=>{
+    fs.writeFile('./output/index.html', str, err=>{
        if(err) throw err
-       console.log("File Written")
+       console.log("HTML file generated")
     })
 }
-
 
 function init(){
     newMember()
