@@ -17,7 +17,7 @@ function newMember(){
     inquirer.prompt([
         {
         type: "input",
-        message: "Enter team member's Name",
+        message: "Enter team member's name",
         name: "name",
         validate: function(data){
             if(data.length <= 0){
