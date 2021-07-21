@@ -43,6 +43,8 @@ npm i
 ```
 
 ## Instructions
+Demonstration of application can be found <a href="https://youtu.be/qh_pXoOuc3o">here</a>.
+
 After running `npm i` in your terminal run the following command
 ```
 node index.js
